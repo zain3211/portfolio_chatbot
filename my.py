@@ -29,9 +29,6 @@ loaders = [
 docs = []
 for loader in loaders:
     docs.extend(loader.load())
-embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-#Load the embedings
-vector_db = Chroma(persist_directory='vector_db',collection_name="wissam_collection",embedding_function=embeddings)
 
 embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 
